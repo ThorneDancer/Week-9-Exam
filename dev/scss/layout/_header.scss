@@ -1,0 +1,46 @@
+/* =============
+    Header
+============= */
+header {
+    display: grid;
+    grid-template-areas:
+    "logo burger"
+    "nav nav";
+    grid-template-columns: 70% auto;
+    @include md {
+        grid-template-areas: "logo nav";
+        grid-template-columns: 30% auto;
+    }
+    // logo container
+    section:nth-child(1) {
+        grid-area: logo;
+        padding: 10px;
+    }
+    // burger container
+    section:nth-child(2) {
+        align-items: center;
+        display: flex;
+        grid-area: burger;
+        justify-content: flex-end;
+        padding: 10px;
+        @include md {
+            display: none;
+        }
+
+        button {
+            background-color: $white;
+            color: $green;
+            border: none;
+            outline: none;
+            font-size: rem-calc(30);
+        }
+    }
+    // nav container
+    nav {
+        display: none;
+        grid-area: nav;
+        @include md {
+            display: block !important;
+        }
+    }
+}

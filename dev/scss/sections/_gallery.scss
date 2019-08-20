@@ -1,0 +1,122 @@
+#gallery {
+    padding: 70px 10px;
+
+    ul {
+        display: grid;
+        grid-gap: 20px;
+        @include md {
+            grid-template-areas: "img-5 img-5 img-6" "img-1 img-2 img-2" "img-3 img-4 img-4";
+            grid-template-columns: 50% 25px auto;
+        }
+        @include lg {
+            grid-template-areas: "img-5 img-5 img-5 img-6 img-6" "img-1 img-2 img-3 img-3 img-4";
+            grid-template-columns: 24% 24% 70px auto 24%;
+        }
+
+        li {}
+
+        li:nth-child(1) {
+            background-image: url("../img/gallery/gallery-1.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 308px;
+            width: 100%;
+            @include md {
+                grid-area: img-1;
+                height: 364px;
+                width: 100%;
+            }
+            @include lg {
+                height: 278px;
+            }
+        }
+
+        li:nth-child(2) {
+            background-image: url("../img/gallery/gallery-2.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 308px;
+            width: 100%;
+            @include md {
+                grid-area: img-2;
+                height: 364px;
+                width: 100%;
+            }
+            @include lg {
+                height: 278px;
+            }
+        }
+
+        li:nth-child(3) {
+            background-image: url("../img/gallery/gallery-3.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 308px;
+            width: 100%;
+            @include md {
+                grid-area: img-3;
+                height: 364px;
+                width: 100%;
+            }
+            @include lg {
+                height: 278px;
+            }
+        }
+
+        li:nth-child(4) {
+            background-image: url("../img/gallery/gallery-4.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 308px;
+            width: 100%;
+            @include md {
+                grid-area: img-4;
+                height: 364px;
+                width: 100%;
+            }
+            @include lg {
+                height: 278px;
+            }
+        }
+
+        li:nth-child(5) {
+            background-image: url("../img/gallery/gallery-5.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: none;
+            height: 308px;
+            width: 100%;
+            @include md {
+                display: inline-block;
+                grid-area: img-5;
+                height: 364px;
+            }
+            @include lg {
+                height: 469px;
+            }
+        }
+
+        li:nth-child(6) {
+            background-image: url("../img/gallery/gallery-6.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: none;
+            height: 308px;
+            width: 100%;
+            @include md {
+                display: inline-block;
+                grid-area: img-6;
+                height: 364px;
+            }
+            @include lg {
+                height: 469px;
+            }
+        }
+    }
+}

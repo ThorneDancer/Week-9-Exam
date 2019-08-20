@@ -1,0 +1,19 @@
+#hero {
+    div {
+        background-image: url("../img/hero/hero.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 238px;
+        width: 100%;
+        @include md {
+            background-position: right;
+            height: 596px;
+            width: 769px;
+        }
+        @include lg {
+            height: 789px;
+            width: 1262px;
+        }
+    }
+}

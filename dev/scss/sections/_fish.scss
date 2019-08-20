@@ -1,0 +1,147 @@
+#fish {
+    background-color: $blue;
+    padding: 120px 0;
+
+    section {
+        @include md {
+            display: grid;
+            grid-template-areas: ". shark marine .";
+            grid-template-columns: 10% auto auto 20%;
+        }
+        @include lg {
+            grid-template-areas: ". shark . marine .";
+            grid-template-columns: 6% auto 6% auto 11%;
+        }
+
+        #shark {
+            display: flex;
+            justify-content: center;
+            @include md {
+                grid-area: shark;
+            }
+
+            div {
+                background-image: url("../img/fish/shark.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 112px;
+                width: 150px;
+                @include md {
+                    height: 160px;
+                    width: 207px;
+                }
+                @include lg {
+                    height: 213px;
+                    width: 290px;
+                }
+            }
+        }
+
+        article {
+            padding: 10px;
+            @include md {
+                grid-area: marine;
+            }
+
+            h1 {
+                font-size: rem-calc(17);
+                font-weight: 600;
+                padding-bottom: 10px;
+                @include md {
+                    font-size: rem-calc(21);
+                }
+                @include lg {
+                    font-size: rem-calc(24);
+                }
+            }
+
+            p {
+                font-size: rem-calc(16);
+                font-weight: 300;
+                @include lg {
+                    font-size: rem-calc(20);
+                }
+            }
+        }
+    }
+}
+
+#fish-2 {
+    background-color: $blue;
+    margin-top: -440px;
+
+    ul {
+        display: grid;
+        grid-template-areas: ". . . ." "fish-1 . . ." ". . . ." ". . . ." ". . . ." ". . fish-3 ." ". . . .";
+        grid-template-columns: 20px auto 130px 10px;
+        grid-template-rows: repeat(7, 1fr);
+        @include md {
+            grid-template-areas: ". . . . . . ." ". fish-1 . . . . ." ". . . . . . ." ". . . . . . ." ". . . . . . ." ". . . . . . ." ". . . . . fish-3 ." ". . . fish-2 . . ." ". . . . . . .";
+            grid-template-columns: 10% 76px 4% 76px auto 101px 10%;
+            grid-template-rows: repeat(9, 1fr);
+        }
+        @include lg {
+            grid-template-areas: ". . . . . . " ". . . fish-1 . . " ". . . . . . " ". . . . . . " ". . . . . . " ". fish-2 . . fish-3 . " ". . . . . . ";
+            grid-template-columns: 7% 90px auto 63px 144px 6%;
+            grid-template-rows: repeat(7, 1fr);
+        }
+
+        li:nth-child(1) {
+            background-image: url("../img/fish/redfish.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            grid-area: fish-1;
+            height: 28px;
+            width: 63px;
+            @include md {
+                height: 34px;
+                transform: scaleX(-1);
+                width: 76px;
+            }
+            @include lg {
+                height: 28px;
+                width: 63px;
+            }
+        }
+
+        li:nth-child(2) {
+            background-image: url("../img/fish/redfish.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: none;
+            height: 28px;
+            width: 63px;
+            @include md {
+                display: inline-block;
+                grid-area: fish-2;
+                height: 34px;
+                width: 76px;
+            }
+            @include lg {
+                height: 40px;
+                width: 90px;
+            }
+        }
+
+        li:nth-child(3) {
+            background-image: url("../img/fish/whalefish.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            grid-area: fish-3;
+            height: 65px;
+            width: 130px;
+            @include md {
+                height: 50px;
+                width: 101px;
+            }
+            @include lg {
+                height: 72px;
+                width: 144px;
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+/* =============
+    Base
+============= */
+ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+h1,h2,h3,h4,h5,h6,p,figure{
+    margin: 0;
+    padding: 0;
+}
+
+.project-grid{
+    display: grid;
+    grid-template-areas: ". content .";
+    grid-template-columns: 10px auto 10px;
+    >div{
+        grid-area: content;
+    }
+}

@@ -1,0 +1,71 @@
+/* =============
+    Footer
+============= */
+footer {
+    background-color: $grey;
+    padding: 70px 10px;
+    @include md {
+        display: grid;
+        grid-template-areas: ". kangaroo ." ". text .";
+        grid-template-columns: auto 482.5px auto;
+    }
+    @include lg {
+        grid-template-columns: auto 570px auto;
+    }
+
+    div {
+        display: flex;
+        grid-area: kangaroo;
+        justify-content: center;
+        margin-bottom: 40px;
+        @include md {
+            margin-bottom: 10px;
+        }
+
+        div {
+            border: 1px $black solid;
+            border-radius: 150px;
+            height: 137px;
+            width: 137px;
+            @include md {
+                height: 196px;
+                width: 196px;
+            }
+            @include lg {
+                height: 261px;
+                width: 261px;
+            }
+
+            div {
+                background-image: url("../img/hero/footer.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border: none;
+                height: 127px;
+                margin-top: 4px;
+                width: 127px;
+                @include md {
+                    height: 181px;
+                    margin-top: 7px;
+                    width: 181px;
+                }
+                @include lg {
+                    height: 241px;
+                    margin-top: 10px;
+                    width: 241px;
+                }
+            }
+        }
+    }
+
+    h2 {
+        font-size: rem-calc(14);
+        font-weight: 600;
+        grid-area: text;
+        text-align: center;
+        @include lg {
+            font-size: rem-calc(16);
+        }
+    }
+}
